@@ -1,94 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANTAR - Masti Ka Sultan 😂🔥</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background: #0d0d0d;
-            color: #fff;
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(135deg, #ff6f61, #de57ff);
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 3rem;
-        }
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .btn {
-            display: inline-block;
-            margin: 15px;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #ff6f61, #de57ff);
-            color: #fff;
-            font-size: 1.2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: linear-gradient(135deg, #57ffb5, #6188ff);
-        }
-        footer {
-            background: #111;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PANTAR - Spread the Happiness!</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #000428, #004e92);
+        color: #fff;
+        overflow: hidden;
+        height: 100vh;
+    }
+    h1, h2, h3, p {
+        text-align: center;
+    }
+    .container {
+        position: relative;
+        height: 100vh;
+    }
+    .pantar {
+        position: absolute;
+        width: 250px;
+        height: auto;
+        animation: movePantar 8s infinite alternate ease-in-out;
+    }
+    .tagline {
+        font-size: 2rem;
+        text-align: center;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+    .tagline:hover {
+        color: #ff0;
+    }
+    @keyframes movePantar {
+        0% { top: 10%; left: 5%; }
+        50% { top: 50%; left: 80%; transform: rotateY(180deg); }
+        100% { top: 70%; left: 10%; }
+    }
+    .chat-btn, .search-bar {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+    .chat-btn button, .search-bar input, .search-bar button {
+        font-size: 1.5rem;
+        padding: 10px 30px;
+        margin: 5px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .chat-btn button:hover, .search-bar button:hover {
+        background: #ff6600;
+        color: #fff;
+    }
+    .happiness-chart, .world-map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        background: #222;
+        border-radius: 15px;
+        margin: 30px;
+    }
+    .happiness-chart canvas, .world-map canvas {
+        width: 100%;
+        height: 100%;
+    }
+</style>
 </head>
 <body>
-
-<header>
-    <h1>🔥 PANTAR - Masti Ka Sultan 😂🔥</h1>
-</header>
-
-<section>
-    <h2>😎 Bore ho rahe ho? PANTAR ko bulao! 😂🔥</h2>
-    <img src="https://via.placeholder.com/600x300" alt="PANTAR Image">
-    <a href="#jokes" class="btn">Dimaag ka dahi karwao! 😂🔥</a>
-</section>
-
-<section id="jokes">
-    <h2>🔥 Jokes Section 😂</h2>
-    <p>"PANTAR ke jokes sun ke hasi control nahi hoti! 😂🔥"</p>
-    <a href="#banter" class="btn">Aur jokes de PANTAR! 😎🔥</a>
-</section>
-
-<section id="banter">
-    <h2>🔥 Banter Zone 😂🔥</h2>
-    <p>"Swag wale banter se full maja aayega! 😂🔥"</p>
-    <a href="#about" class="btn">Swag wala banter de PANTAR! 😎🔥</a>
-</section>
-
-<section id="about">
-    <h2>🔥 About PANTAR 😂🔥</h2>
-    <p>"Na ladka, na ladki… bas masti ka sultan! 😂🔥"</p>
-    <p>"Bina logic wale sawaalon ka expert! 😂🔥"</p>
-</section>
-
-<section id="contact">
-    <h2>🔥 Chat with PANTAR 😂🔥</h2>
-    <p>"Baat karni ho, to PANTAR se seedha connect ho jao! 😂🔥💥"</p>
-    <a href="https://wa.me/1234567890" class="btn">WhatsApp PANTAR! 😎🔥</a>
-</section>
-
-<footer>
-    <p>© 2025 PANTAR. Masti Unlimited! 😂🔥</p>
-</footer>
-
+<div class="container">
+    <h1>🔥 Welcome to PANTAR's World! 🔥</h1>
+    <div class="tagline" onclick="replyTagline('Bore ho rahe ho? PANTAR ko bulao!')">Bore ho rahe ho? PANTAR ko bulao!</div>
+    <div class="pantar">
+        <img src="https://ibb.co/FLtzQDfy" alt="PANTAR" width="100%">
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Enter topic...">
+        <button onclick="searchTopic()">Search</button>
+    </div>
+    <div class="chat-btn">
+        <button onclick="startChat()">💬 Chat with PANTAR</button>
+    </div>
+    <div class="happiness-chart">
+        <h2>📈 Happiness Chart 📈</h2>
+    </div>
+    <div class="world-map">
+        <h2>🌍 Happiness Percentage Analysis 🌍</h2>
+    </div>
+</div>
+<script>
+function replyTagline(msg) {
+    alert('PANTAR says: ' + msg);
+}
+function searchTopic() {
+    alert('PANTAR is searching for your topic...');
+}
+function startChat() {
+    alert('PANTAR is ready to chat with you!');
+}
+</script>
 </body>
 </html>
